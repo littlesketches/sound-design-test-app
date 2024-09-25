@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tone JS test app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block"rel="stylesheet"/>
+	<link href="./css/main.css"rel="stylesheet"/>
+    <script  type="text/javascript" src="./js/tone/Tone.js"></script>
+    <script  type="text/javascript" src="./js/tone/tone-ui.js"></script>
+    <script  type="text/javascript" src="./js/tone/components.js"></script>
+    <script type="text/javascript" src="./js/instrumentConfig.js" ></script>
+  </head>
+  <body>
+    <main>
+        <h1>memory x performance testing</h1>
+
+        <div id = 'transport-ui'>
+            <tone-play-toggle id = "transport-toggle__button"></tone-play-toggle>
+            <tone-slider id = 'bpm__slider' label="Tempo" units="bpm" 
+                min="40"  max="240" value="96">
+            </tone-slider>
+        </div>
+        <div id = 'master-param-ui' class = 'param__container'> </div>        
+        <div id = 'sequencer-ui'>
+                <tone-step-sequencer name = "Drum sequencer"
+                    rows = 4
+                    columns = 16
+                    subdivision = "16n">
+                </tone-step-sequencer>
+        </div>
+        <div id = 'drumkit-param-ui' class = 'param__container'> </div>
+
+        <div id = 'keyboard-ui'></div>
+        <div id = 'synth-param-ui' class = 'param__container'> </div>
+    </main>
+
+    <script type="text/javascript" src="js/main.js" ></script>
+  </body>
+</html>
